@@ -1,24 +1,19 @@
 import express from 'express';
-import asyncHandler from '../../utils/asyncHandler.js';
 import {
   createUser,
   deleteUser,
   getAllUser,
   getOneUser,
-  getUserInfo,
-  loginUser,
-  registerUser,
   updateUser,
 } from '../controller/user.controller.js';
-import { registerValidator } from '../middlewares/validators/user/register.validators.js';
-import { loginValidator } from '../middlewares/validators/user/login.validators.js';
+import { userValidator } from '../middlewares/validators/user.validators.js';
 
 const userRouter = express.Router();
 
-userRouter.get('/users', getAllUser);
-userRouter.get('/users/:userId', getOneUser);
-userRouter.post('/users', createUser);
-userRouter.put('/users/:userId', updateUser);
-userRouter.delete('/users/:userId', deleteUser);
+userRouter.get('/', getAllUser);
+userRouter.get('/:userId', getOneUser);
+userRouter.post('/', userValidator, createUser);
+userRouter.put('/:userId', updateUser);
+userRouter.delete('/:userId', deleteUser);
 
 export default userRouter;

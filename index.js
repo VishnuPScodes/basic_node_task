@@ -2,17 +2,17 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { connectToDb } from './src/configs/db.js';
-import authRouter from './src/routes/auth.routes.js';
+import userRouter from './src/routes/user.routes.js';
 
 const app = express();
 dotenv.config();
 app.use(express.json());
 
 const PORT = process.env.PORT;
-const MONGO_URL = process.env.MONGO_URL;
+const MONGO_URL = process.env.URL;
 app.use(cors());
 
-app.use('/auth', authRouter);
+app.use('/users', userRouter);
 
 app.listen(PORT, async () => {
   try {

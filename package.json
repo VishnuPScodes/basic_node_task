@@ -16,11 +16,14 @@
   "bugs": {
     "url": "https://github.com/VishnuPScodes/basic_node_task/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/VishnuPScodes/basic_node_task#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-validator": "^7.0.1",
     "mongoose": "^8.3.2"
   }
 }
