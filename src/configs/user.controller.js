@@ -1,3 +1,3 @@
-export const getUser = async (req, res) => {
-  const user = await User;
+export const getAllUser = async (req, res) => {
+  const user = await User.find();
 };
