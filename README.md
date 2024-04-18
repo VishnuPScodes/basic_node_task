@@ -1,3 +1,23 @@
+## Setup and Running Locally
+
+### Clone the Repository
+
+```sh
+git clone https://github.com/VishnuPScodes/basic_node_task.git
+
+It will run the server on port 4001. Access it via `http://localhost:4001/users`.
+
+API Endpoints:
+
+- **GET /users**: Retrieves all users.
+- **GET /users/:userId**: Retrieves a single user by their ID.
+- **POST /users**: Creates a new user.
+- **PUT /users/:userId**: Updates an existing user.
+- **DELETE /users/:userId**: Deletes an existing user.
+
+You can check the validators by making a POST request without providing a specific field or providing incorrect input. The API will respond with appropriate error messages indicating the validation failure.
+
+
 # User API
 
 Welcome to the User API! This API allows you to perform CRUD operations on user data.
